@@ -1,0 +1,7 @@
+services:
+  aws-bill-agent:
+    build: .
+    env_file: .env
+    environment:
+      TZ: ${TZ:-UTC}
+    restart: unless-stopped
